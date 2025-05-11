@@ -1,0 +1,29 @@
+[package]
+name = "rs-choice2asn1"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[lints.rust]
+unsafe_code = "deny"
+
+[lints.clippy]
+unwrap_used = "forbid"
+
+[profile.release-wasm]
+inherits = "release"
+lto = true
+strip = true
+opt-level = 's'
+codegen-units = 16
+
+[dependencies.der]
+version = "0.7.10"
+default-features = false
+features = [
+	"derive",
+	"std",
+	"real",
+]
