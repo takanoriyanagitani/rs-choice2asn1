@@ -1,0 +1,11 @@
+FlatChoice DEFINITIONS ::= BEGIN
+
+    FlatValue ::= CHOICE {
+      unspecified NULL,
+      boolean BOOLEAN,
+      integer INTEGER,
+      real REAL,
+      generalizedTime GeneralizedTime
+    }
+
+END
